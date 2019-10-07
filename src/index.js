@@ -12,9 +12,14 @@ function ClickCounter() {
     }, [count]);
 
     return (
-        <div>
-            <p>You clicked {count} times.</p>
-            <button onClick={() => setCount(count + 1)}>clickCounter</button>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <h1>My button!!!</h1>
+                    <p>You clicked {count} times.</p>
+                    <button class="btn btn-info" onClick={() => setCount(count + 1)}>clickCounter</button>
+                </div>
+            </div>
         </div>
     )
 }
