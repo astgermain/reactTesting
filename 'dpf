@@ -1,0 +1,23 @@
+[33mcommit 34f16089762f218b8fe4dab3993e5ed868c10140[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: astgermain <astgermain@mail.sfsu.edu>
+Date:   Mon Oct 7 13:33:31 2019 -0700
+
+    Moved counter component to component folder, setup export and import
+
+[33mcommit 931f12ddb90ede13308569d3d5b14eb777bba285[m
+Author: astgermain <astgermain@mail.sfsu.edu>
+Date:   Mon Oct 7 02:22:11 2019 -0700
+
+    Added bootstrap
+
+[33mcommit bdc5a525f82ce2b4125d3fd199bcfe5c99114678[m
+Author: astgermain <astgermain@mail.sfsu.edu>
+Date:   Mon Oct 7 02:07:24 2019 -0700
+
+    Base React App files
+
+[33mcommit 941c55af78da2bc9215d923df1d04980946abf53[m
+Author: Andrew St Germain <38926995+astgermain@users.noreply.github.com>
+Date:   Mon Oct 7 01:33:34 2019 -0700
+
+    Initial commit

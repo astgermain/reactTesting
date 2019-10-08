@@ -1,12 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, { Component, useState, useEffect } from 'react'
 import ReactDOM from 'react-dom';
 import Counter from './components/counter'
-const element = <h1>Hello World</h1>
-//ReactDOM.render(ClickCounter(), document.getElementById('root'));
+import Like from './components/like'
 
-
+const element = (
+    <div class="container-fluid">
+    <div class="row">
+        <Counter />
+        <Like />
+    </div>
+    </div>
+);
 
 ReactDOM.render(
-    <Counter />,
+    element,
     document.getElementById('root')
 );
