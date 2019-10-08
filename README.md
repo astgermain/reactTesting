@@ -1,3 +1,9 @@
+# React Playground for Astgermain
+
+## Practicing React and possibly more
+
+## React Default Info
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
