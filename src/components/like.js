@@ -12,10 +12,10 @@ const Like = () => {
     
  
     return (
-        <div class="col-6">
-            <h1>My like button!!!</h1>
+        <div className="col-6">
+            <h1>My like button!</h1>
             <p>Value of liked: {liked ? 'True' : 'False'}.</p>
-            <button class="btn btn-info" onClick={handleClick}>
+            <button className="btn btn-info" onClick={handleClick}>
             {liked ? 'Liked' : 'Like'}
             </button>
         </div>

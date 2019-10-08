@@ -5,10 +5,10 @@ function Counter() {
     const counterClick = () => setCount(count + 1);
    
     return (    
-        <div class="col-6">
-            <h1>My button!!!</h1>
+        <div className="col-6">
+            <h1>My click counter!</h1>
             <p>You clicked {count} times.</p>
-            <button class="btn btn-info" onClick={counterClick}>Click Counter</button>
+            <button className="btn btn-info" onClick={counterClick}>Click Counter</button>
         </div>              
     )
 }
