@@ -1,7 +1,7 @@
 import React, { Component, useState, useLayoutEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
-
+import './cats.jpg';
 
 function Quiz({ numRows, rowHeight }) {
 
@@ -12,15 +12,28 @@ function Quiz({ numRows, rowHeight }) {
     const [scrollTop, setScrollTop] = useState(window.scrollY);
     const [startIndex, setStartIndex] = useState(0);
     const [endIndex, setEndIndex] = useState(0);
-    const [rendered, setRendered] = useState(endIndex - startIndex)
+    const [rendered, setRendered] = useState(endIndex - startIndex);
     const items = [];
     var index = startIndex;
-        
+
+    //Issues since I cannot grab photo's from data base in order since coming up with
+    //100,000 photos is too difficult, when loaded from db will run better
+
+    const url = "https://source.unsplash.com/collection/139386/150x150/?sig=";
+    let tempurl = "https://source.unsplash.com/collection/139386/150x150/?sig=";
+    const [att, setAttSrc] = useState(null);
+    const randomNum = () => {
+      return Math.floor(Math.random() * 1000);
+    
+    };
+    
     
     function renderRowAtIndex(index) {
         return (
           <div style={{height: rowHeight, padding: "5px 10px", fontSize: 24}}>
-            This is #{(index + 1)}.
+            
+            <img src={tempurl}></img>
+            Cat image #{index +1}
           </div>
         );
       }
@@ -30,11 +43,11 @@ function Quiz({ numRows, rowHeight }) {
         const onScrollHandle = () => {
             setScrollTop(window.scrollY);
             setRendered(endIndex - startIndex);
+            index = startIndex;
           };
-        setStartIndex(Math.floor(Math.max(scrollTop-(rowHeight*12), 0) / rowHeight));
-        index = startIndex;
+        setStartIndex(Math.floor(Math.max(scrollTop-(rowHeight * 8), 0) / rowHeight));
         setEndIndex(Math.min(Math.min(
-            startIndex + Math.ceil(availableHeight/rowHeight) + 12 ,
+            startIndex + Math.ceil(availableHeight/rowHeight * 5) + 0 ,
             numRows
         ), numRows));
         
@@ -48,11 +61,12 @@ function Quiz({ numRows, rowHeight }) {
     //for instance while using scrollbar on the side
     //to prevent overrendering and performance issues due to rapid scrolling
 
-
+    
 
     while (index < endIndex) {
         items.push(<li key={index}>{renderRowAtIndex(index)}</li>);
-        index++;  
+        index = index + 1;
+        tempurl = `${url}${index}`;
     }
     
     
@@ -70,7 +84,7 @@ function Quiz({ numRows, rowHeight }) {
         <div
         style={{ height: "100vh", width: "100vw"}}
         >
-        <div style={{height: totalHeight, paddingTop: startIndex * rowHeight}}>
+        <div style={{height: (rowHeight * rendered), paddingTop: startIndex * rowHeight}}>
             {items}
         </div>
         </div>

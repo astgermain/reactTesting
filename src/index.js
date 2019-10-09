@@ -6,6 +6,7 @@ import Quiz from './components/Quiz'
 
 import './main.css';
 
+
 const element = (
     <div className="container-fluid">
     <div className="row">
@@ -17,8 +18,8 @@ const element = (
     </div>
     <div className="row">
         <Quiz
-        numRows={15000}
-        rowHeight={40}
+        numRows={300000}
+        rowHeight={150}
         />
     </div>
     </div>
