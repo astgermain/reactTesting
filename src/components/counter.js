@@ -1,3 +1,6 @@
+//Simple react button like increments count when clicked.
+//Could be used for subscriber count, likes, etc
+
 import React, { Component, useState, useEffect } from 'react'
 
 function Counter() {
