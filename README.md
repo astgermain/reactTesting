@@ -1,6 +1,14 @@
-# React Playground for Astgermain
+# React Playground
 
-## Practicing React and possibly more
+## I practice React Here
+
+## Components:
+
+### Smart Load: This component uses React states to smartly load in random images from unsplash while incrementing the list number. The purpose is to create a seamingly endless scrolling experience that you would find on say Facebook photo albumns, while maintaining perforamce within the constraints of hardware.
+
+### Counter: Simple button that increments a value when pressed
+
+### Like Button: A like button
 
 ## React Default Info
 
