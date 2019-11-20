@@ -1,3 +1,8 @@
+//This component uses React states to smartly load in random images from unsplash while incrementing the list number. 
+//The purpose is to create a seamingly endless scrolling experience that you would find on say Facebook photo albumns, while maintaining
+//perforamce within the constraints of hardware.
+//Also loads a bunch of cool cat pictures.
+
 import React, { Component, useState, useLayoutEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
